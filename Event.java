@@ -1,4 +1,4 @@
-package com.jorge.ipaybillsproyect.ipaybillsjava;
+package com.jorge.project.ipaybills;
 
 public class Event {
     private String name;
