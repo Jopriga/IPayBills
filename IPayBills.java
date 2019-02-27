@@ -1,48 +1,22 @@
 package com.jorge.ipaybillsproyect.ipaybillsjava;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class IPayBills {
 
-    private static void menu(){
-        System.out.println("Select an option" +"\n"+
-                "1. New Event" +"\n"+
-                "2. My Events" +"\n"+
-                "3. Exit");
-    }
-
-    private static void processMenu(Events events){
-        Scanner sc = new Scanner(System.in);
-        menu();
-        switch(sc.nextInt()){
-            case 1:
-                System.out.println("Enter the name and max number of participants: ");
-                events.addEvent(new Event(sc.next(),sc.nextInt()));
-                break;
-            case 2:
-                events.toString();
-                System.out.println("Do you want to remove any event? (1:Yes, 2:No)");
-                if(sc.nextInt()== 1){
-                    System.out.println("Enter the name: ");
-                    String nameEvent = sc.next();
-                    events.removeEvent(events.find(nameEvent));
-                } else{ events.toString();}
-                break;
-            case 3:
-                System.exit(0);
-                break;
-             default:
-                 System.out.println("Invalid option");
-                 break;
-        }
-        sc.close();
-    }
-
     public static void main(String args[]){
-        System.out.println("Starting IPayBills...");
-        Events events = new Events(new ArrayList<Event>());
-        while(true){
-            processMenu(events);
+        EventInterface events = new Events(new ArrayList<Event>());
+
+        events.addEvent(new Event("fiesta",4));
+        events.addEvent(new Event("cena",2));
+        events.addEvent(new Event("compra",3));
+        events.addEvent(new Event("viaje",4));
+
+        Event eventRemove=events.find("fiesta");
+        events.removeEvent(eventRemove);
+        events.addEvent(new Event("comida",5));
+        
+        for(int i=0;i<events.size();i++){
+            System.out.println("Event: "+events.getEvents().get(i).toString());
         }
     }
