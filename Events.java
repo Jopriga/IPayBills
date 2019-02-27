@@ -24,6 +24,10 @@ public class Events implements EventInterface {
         }
         return events.get(aux);
     }
+    
+    public int size(){
+        return events.size();
+    }    
 
     public ArrayList<Event> getEvents(){
         return events;
