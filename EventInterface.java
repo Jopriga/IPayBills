@@ -1,5 +1,4 @@
 package com.jorge.project.ipaybills;
-import java.util.ArrayList;
 
 public interface EventInterface {
     
@@ -8,6 +7,4 @@ public interface EventInterface {
     void addEvent(Event e); //
     void removeEvent(Event e);
     int size();
-    ArrayList<Event>getEvents();
-    
 }
