@@ -5,7 +5,7 @@ public class Events implements EventInterface {
     private ArrayList<Event>events;
     private static Events object;
 
-    public Events(ArrayList<Event> e){
+    private Events(ArrayList<Event> e){
         this.events = e;
     }
     
