@@ -3,10 +3,12 @@ package com.jorge.project.ipaybills;
 public class Event {
     private String name;
     private int maxPeople;
+    private People people;
 
-    public Event(String name, int maxPeople){
+    public Event(String name, int maxPeople, People people){
         this.name = name;
         this.maxPeople = maxPeople;
+        this.setPeople(people);
     }
 
     public String getName() {
@@ -24,7 +26,14 @@ public class Event {
     public void setMaxPeople(int maxPeople) {
         this.maxPeople = maxPeople;
     }
+    
+    public PeopleList getPeople() {
+		return people;
+	}
 
+	public void setPeople(PeopleList people) {
+		this.people = people;
+	}
     @Override
     public String toString() {
         return "Event{" +
