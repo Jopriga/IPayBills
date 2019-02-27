@@ -3,9 +3,17 @@ import java.util.ArrayList;
 
 public class Events implements EventInterface {
     private ArrayList<Event>events;
+    private static Events object;
 
     public Events(ArrayList<Event> e){
         this.events = e;
+    }
+    
+    public static Event getEventList(ArrayList<Event>events){
+    	 if (object == null){
+ 	        object = new Event(events);
+ 	    }
+ 	    return object;
     }
 
     public void addEvent(Event event){
