@@ -15,21 +15,21 @@ public class Events implements EventInterface {
         events.remove(event);
     }
 
-    public Event find(String event){
+    public Event findByName(String event){
         int aux = 0;
         for (int i=0; i<events.size(); i++){
             if(event.equals(events.get(i).getName())){
                aux = i;
             }
         }
-        return events.get(aux);
+        return findById(aux);
+    }
+    
+     public Event findById(int id){
+        return events.get(id);
     }
     
     public int size(){
         return events.size();
     }    
-
-    public ArrayList<Event> getEvents(){
-        return events;
-    }
 }
