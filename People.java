@@ -8,12 +8,12 @@ public class People implements PersonInterface {
 		this.people = people;
 	}
 	
-	public void addPerson(Person person){
+	public void add(Person person){
 		this.people.add(person);
 	}
 	
 	public void removePerson(Person person){
-		people.remove(person);
+		this.people.remove(person);
 	}
 
 	public Person findByName(String name){
