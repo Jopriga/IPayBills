@@ -5,13 +5,13 @@ public class Events implements EventInterface {
     private ArrayList<Event>events;
     private static Events object;
 
-    private Events(ArrayList<Event> e){
-        this.events = e;
+    private Events(){
+        events = new ArrayList<Event>();
     }
     
-    public static Event getEventList(ArrayList<Event>events){
+    public static Events getEventList(){
     	 if (object == null){
- 	        object = new Event(events);
+ 	        object = new Events();
  	    }
  	    return object;
     }
