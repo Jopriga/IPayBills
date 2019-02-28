@@ -1,4 +1,4 @@
-package com.jorge.ipaybillsproyect.ipaybillsjava;
+package com.jorge.project.ipaybills;
 
 import java.util.ArrayList;
 
