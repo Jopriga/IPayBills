@@ -2,7 +2,7 @@ package com.jorge.project.ipaybills;
 
 import java.util.ArrayList;
 
-public class Payments implements PaymentInterface{
+public class Payments implements PaymentsInterface{
 	private ArrayList<Payment>payments;
 	
 	public Payments(ArrayList<Payment>payments){
