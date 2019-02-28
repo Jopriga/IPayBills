@@ -2,7 +2,7 @@ package com.jorge.project.ipaybills;
 
 import java.util.ArrayList;
 
-public class Movements implements MovementList {
+public class Movements implements MovementInterface {
 	private ArrayList<Movement>movements;
 	
 	public Movements(ArrayList<Movement>movements){
