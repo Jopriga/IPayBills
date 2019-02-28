@@ -1,9 +1,9 @@
 package com.jorge.project.ipaybills;
 
 public interface PersonInterface {
-	Person findById(int id);
+    Person findById(int id);
     Person findByName(String name);
-    void addPerson(Person e); //
-    void removePerson(Person e);
+    void add(Person p); 
+    void remove(Person p);
     int size();
 }
