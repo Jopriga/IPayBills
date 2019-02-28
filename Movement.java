@@ -39,6 +39,6 @@ public class Movement {
 
 	@Override
 	public String toString() {
-		return "Movement [name=" + name + ", money=" + money + ", person="+ person + "]";
+		return "Movement [name=" + name + ", money=" + money + ", person="+ person.getName() + "]";
 	}
 }
