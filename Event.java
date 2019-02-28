@@ -10,6 +10,15 @@ public class Event {
         this.maxPeople = maxPeople;
         this.setPeople(people);
     }
+	
+    public void addPerson(String name){
+    	Person person = new Person(name);
+    	people.add(person);
+    }
+    
+    public void removePerson(String name){
+    	people.remove(people.findByName(name));
+    }
 
     public String getName() {
         return name;
