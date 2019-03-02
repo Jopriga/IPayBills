@@ -15,7 +15,11 @@ public class Payments implements PaymentsInterface{
 		payment.getTo().receive(payment.getMoney());
 	}
 	
-    public Payment find(int id){
-        return payments.get(id);
-    }
-}
+    	public Payment find(int id){
+        	return payments.get(id);
+    	}
+	
+	public int size(){
+    		return payments.size();
+    	}
+} 
